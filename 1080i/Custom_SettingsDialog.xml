@@ -141,7 +141,7 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>Skin.HasSetting(HomeMoviesTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeMoviesTiles)</onclick>
-                    <label>Set custom Movies tiles blue</label>
+                    <label>Set custom Movies tiles cyan</label>
                     <enable>!Skin.HasSetting(HomeMovies)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2201)">Conditional</animation>
                 </control>
@@ -150,7 +150,7 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>Skin.HasSetting(HomeTVShowsTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeTVShowsTiles)</onclick>
-                    <label>Set custom TV shows tiles green</label>
+                    <label>Set custom TV shows tiles magenta</label>
                     <enable>!Skin.HasSetting(HomeTVShows)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2202)">Conditional</animation>
                 </control>
@@ -159,7 +159,7 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>Skin.HasSetting(HomeMusicTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeMusicTiles)</onclick>
-                    <label>Set custom Music tiles red</label>
+                    <label>Set custom Music tiles yellow</label>
                     <enable>!Skin.HasSetting(HomeMusic)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2203)">Conditional</animation>
                 </control>
@@ -168,7 +168,7 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>Skin.HasSetting(HomeWeatherTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeWeatherTiles)</onclick>
-                    <label>Set custom Weather tiles orange</label>
+                    <label>Set custom Weather tiles black</label>
                     <enable>!Skin.HasSetting(HomeWeather)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2204)">Conditional</animation>
                 </control>
