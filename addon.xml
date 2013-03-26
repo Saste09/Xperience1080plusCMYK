@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.xperience1080+" version="2.0-Beta4" name="Xperience1080+" provider-name="`Black (mod by Crni)">
+<addon id="skin.xperience1080+CMYK" version="2.0-Beta4" name="Xperience1080+CMYK" provider-name="`Black (mod by Crni (themed by Saste))">
     <requires>
         <import addon="xbmc.gui" version="4.0.0" />
         <import addon="service.skin.widgets" version="0.0.20" />
@@ -17,7 +17,7 @@
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
         <summary lang="en">Crni's mod of Black's Xperience1080 skin</summary>
-        <description lang="en">Crni's mod of Black's Xperience1080 skin</description>
+        <description lang="en">Saste's Theme of Crni's mod of Black's Xperience1080 skin ;)</description>
         <disclaimer lang="en">Compatible with XBMC 12.0 "Frodo" only.</disclaimer>
         <license>Creative Commons Attribution-Noncommercial-Share Alike 3.0</license>
         <forum>http://forum.xbmc.org/showthread.php?tid=150116</forum>
