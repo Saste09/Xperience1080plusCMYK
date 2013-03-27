@@ -1,4 +1,4 @@
-<window>
+﻿<window>
     <defaultcontrol always="true">3</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <onload>SetFocus(31)</onload>
@@ -186,7 +186,7 @@
                     <selected>Skin.HasSetting(BackgroundOpacity)</selected>
                     <onclick condition="!Skin.HasSetting(BackgroundOpacity)">Skin.Reset(HomeBackgroundOpacity)</onclick>
                     <onclick>Skin.ToggleSetting(BackgroundOpacity)</onclick>
-                    <label>Show more fanart</label>
+                    <label>Use dark background</label>
                 </control>
                 <control type="radiobutton" id="1004">
                     <width>1210</width>
