@@ -586,7 +586,8 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -670,7 +671,9 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -791,7 +794,8 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -875,7 +879,9 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -996,7 +1002,8 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1031,7 +1038,7 @@
                                     <width>320</width>
                                     <height>480</height>
                                     <bordersize>5</bordersize>
-                                    <bordertexture border="7">windows/home/tile.png</bordertexture>
+                                    <bordertexture border="7">windows/home/tile-grey.png</bordertexture>
                                     <aspectratio>scale</aspectratio>
                                     <texture background="true" fallback="views/fallbacks/DefaultFolder.png/large.png">$INFO[ListItem.Thumb]</texture>
                                 </control>
@@ -1043,22 +1050,6 @@
                                     <colordiffuse>99000000</colordiffuse>
                                     <texture>windows/common/black.png</texture>
                                 </control>
-                            </control>
-                            <control type="image">
-                                <posx>220</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
-                                <visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>220</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayWatched.png/extended-w.png</texture>
-                                <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
                             </control>
                         </itemlayout>
                         <focusedlayout width="332" height="750">
@@ -1082,7 +1073,9 @@
                                     <posy>475</posy>
                                     <width>330</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1128,22 +1121,6 @@
                                     <colordiffuse>99000000</colordiffuse>
                                     <texture>windows/common/black.png</texture>
                                 </control>
-                            </control>
-                            <control type="image">
-                                <posx>220</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
-                                <visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>220</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayWatched.png/extended-w.png</texture>
-                                <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
                             </control>
                         </focusedlayout>
                     </control>
@@ -1203,7 +1180,8 @@
                                     <posy>265</posy>
                                     <width>490</width>
                                     <height>142</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1299,7 +1277,9 @@
                                     <posy>265</posy>
                                     <width>490</width>
                                     <height>142</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1432,7 +1412,8 @@
                                     <posy>265</posy>
                                     <width>490</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1516,7 +1497,9 @@
                                     <posy>265</posy>
                                     <width>490</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1637,7 +1620,8 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1683,22 +1667,6 @@
                                     <texture>windows/common/black.png</texture>
                                 </control>
                             </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
-                                <visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayWatched.png/extended-w.png</texture>
-                                <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
                         </itemlayout>
                         <focusedlayout width="392" height="550">
                             <control type="button">
@@ -1721,7 +1689,9 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1767,22 +1737,6 @@
                                     <colordiffuse>99000000</colordiffuse>
                                     <texture>windows/common/black.png</texture>
                                 </control>
-                            </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
-                                <visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayWatched.png/extended-w.png</texture>
-                                <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
                             </control>
                         </focusedlayout>
                     </control>
@@ -1842,7 +1796,8 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1888,22 +1843,6 @@
                                     <texture>windows/common/black.png</texture>
                                 </control>
                             </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
-                                <visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayWatched.png/extended-w.png</texture>
-                                <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
                         </itemlayout>
                         <focusedlayout width="392" height="550">
                             <control type="button">
@@ -1926,7 +1865,9 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>110</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -1972,22 +1913,6 @@
                                     <colordiffuse>99000000</colordiffuse>
                                     <texture>windows/common/black.png</texture>
                                 </control>
-                            </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
-                                <visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayWatched.png/extended-w.png</texture>
-                                <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
                             </control>
                         </focusedlayout>
                     </control>
@@ -2047,7 +1972,8 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>174</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" end="60" time="0" condition="true">Conditional</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -2117,22 +2043,6 @@
                                     <texture>windows/common/black.png</texture>
                                 </control>
                             </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
-                                <visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayWatched.png/extended-w.png</texture>
-                                <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
                         </itemlayout>
                         <focusedlayout width="392" height="600">
                             <control type="button">
@@ -2155,7 +2065,9 @@
                                     <posy>375</posy>
                                     <width>390</width>
                                     <height>174</height>
-                                    <texture border="7">windows/home/tile.png</texture>
+                                    <texture border="7">windows/home/tile-grey.png</texture>
+                                    <animation effect="fade" start="60" end="100" time="300" tween="sine" easing="inout">Focus</animation>
+                                    <animation effect="fade" start="100" end="60" time="300" tween="sine" easing="inout">UnFocus</animation>
                                 </control>
                                 <control type="label">
                                     <posx>20</posx>
@@ -2225,22 +2137,6 @@
                                     <colordiffuse>99000000</colordiffuse>
                                     <texture>windows/common/black.png</texture>
                                 </control>
-                            </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayUnWatched.png/extended-w.png</texture>
-                                <visible>!IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
-                            </control>
-                            <control type="image">
-                                <posx>280</posx>
-                                <posy>0</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>overlays/OverlayWatched.png/extended-w.png</texture>
-                                <visible>IntegerGreaterThan(ListItem.Property(PlayCount),0)</visible>
                             </control>
                         </focusedlayout>
                     </control>

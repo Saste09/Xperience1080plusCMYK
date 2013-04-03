@@ -202,14 +202,24 @@
                     <selected>!Skin.HasSetting(SpinControl.Default)</selected>
                     <onclick>Skin.ToggleSetting(SpinControl.Default)</onclick>
                     <label>$LOCALIZE[41112]</label>
-                </control>
+                	<visible>false</visible>
+				</control>
                 <control type="radiobutton" id="1005">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
                     <selected>Skin.HasSetting(HideShutdownButton)</selected>
                     <onclick>Skin.ToggleSetting(HideShutdownButton)</onclick>
                     <label>$LOCALIZE[41200]</label>
-                </control>
+                	<visible>!stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+				</control>
+				<control type="radiobutton" id="1008">
+                    <width>1210</width>
+                    <include>SettingsCategoryRadioButtonVars</include>
+                    <selected>Skin.HasSetting(HideShutdownButton)</selected>
+                    <onclick>Skin.ToggleSetting(HideShutdownButton)</onclick>
+                    <label>Hide power button</label>
+                    <visible>stringcompare(Skin.String(HomeScreen),horizontal)</visible>
+				</control>
                 <control type="radiobutton" id="1006">
                     <width>1210</width>
                     <include>SettingsCategoryRadioButtonVars</include>
@@ -891,7 +901,7 @@
                     <onclick>Skin.ToggleSetting(ArtistSlideShow.Enabled)</onclick>
                     <enable>System.HasAddon(script.artistslideshow)</enable>
                     <label>$LOCALIZE[41103]</label>
-                    <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8002)">Conditional</animation>
+                    <!-- <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(8002)">Conditional</animation>-->
                 </control>
                 <control type="radiobutton" id="8004">
                     <width>1210</width>
