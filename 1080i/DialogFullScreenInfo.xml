@@ -23,8 +23,8 @@
             <animation effect="slide" start="0,0" end="0,205" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd) | [!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]">Conditional</animation>
             <visible>!Window.IsActive(videoosd) + ![!Window.IsActive(videoosd) + [Window.IsActive(script-XBMC-Subtitles-main.xml) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrosdchannels) | Window.IsActive(pvrosdguide) | Window.IsActive(yesnodialog) | Window.IsActive(okdialog) | Window.IsActive(progressdialog) | Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput) | Window.IsActive(shutdownmenu) | Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(videobookmarks)]]</visible>
             <control type="grouplist" id="5">
-                <posx>1523</posx>
-                <posy>637</posy>
+                <posx>1617</posx>
+                <posy>723</posy>
                 <width>300</width>
                 <height>100</height>
                 <align>right</align>
@@ -67,19 +67,115 @@
                     <onclick>PreviousMenu</onclick>
                 </control>
             </control>
-            <control type="textbox">
-                <posx>390</posx>
-                <posy>740</posy>
-                <width>1402</width>
-                <height>260</height>
+            
+			
+			
+								<control type="label">
+                                    <posx>1620</posx>
+                                    <posy>755</posy>
+                                    <width>400</width>
+                                    <height>44</height>
+                                    <label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
+                                    <textcolor>aawhite</textcolor>
+                                    <font>Font-Condensed-S36</font>
+                                    <align>right</align>
+                                    <aligny>center</aligny>
+                                    <visible>IntegerGreaterThan(Player.ChapterCount,0)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <include>visiblehidefadeinfo</include>
+                                </control>
+			
+			<control type="textbox">
+                <posx>290</posx>
+                <posy>807</posy>
+                <width>1333</width>
+                <height>220</height>
                 <label>$VAR[OSDPlot]</label>
                 <textcolor>aawhite</textcolor>
-                <font>Font-Condensed-S38</font>
+                <font>Font-Condensed-S32</font>
                 <align>justify</align>
                 <autoscroll delay="11500" time="5000" repeat="7500" />
                 <visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
                 <include>visiblehidefadeinfo</include>
             </control>
+			
+			
+			
+			
+			<control type="label">
+                                    <posx>121</posx>
+                                    <posy>15</posy>
+                                    <width>1402</width>
+                                    <height>44</height>
+                                    <label>$INFO[VideoPlayer.Year]$INFO[VideoPlayer.Genre, • ,]</label>
+                                    <textcolor>aawhite</textcolor>
+                                    <font>Font-Condensed-S36</font>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                </control>
+			
+			
+			<control type="label">
+                                    <posx>121</posx>
+                                    <posy>15</posy>
+                                    <width>1400</width>
+                                    <height>44</height>
+                                    <label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, • $LOCALIZE[20373] ,]</label>
+                                    <textcolor>88FFFFFF</textcolor>
+                                    <font>Font-Condensed-S36</font>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <scroll>false</scroll>
+                            </control>
+			
+								<control type="group">
+                                    <posx>-10</posx>
+                                    <posy>-12</posy>
+                                    <control type="image">
+                                        <width>140</width>
+                                        <height>100</height>
+                                        <colordiffuse>bbwhite</colordiffuse>
+                                        <texture>flags/defs/hd-osd.png</texture>
+                                        <visible>!IsEmpty(VideoPlayer.VideoResolution) + IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+                                    </control>
+                                    <control type="image">
+                                        <width>140</width>
+                                        <height>100</height>
+                                        <colordiffuse>bbwhite</colordiffuse>
+                                        <texture>flags/defs/sd-osd.png</texture>
+                                        <visible>!IsEmpty(VideoPlayer.VideoResolution) + !IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+                                    </control>
+                                </control>
+								
+							
+								
+								
+								
+								<control type="group">
+                                    <visible>!IsEmpty(VideoPlayer.Rating)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <include>visiblehidefadeinfo</include>
+                                    <posx>1836</posx>
+									<posy>865</posy>
+                                    <control type="label">
+                                        <posx>0</posx>
+                                        <posy>11</posy>
+                                        <width>80</width>
+                                        <height>80</height>
+                                        <label>$INFO[VideoPlayer.Rating]</label>
+                                        <font>Font-Condensed-S50-B</font>
+                                        <textcolor>aawhite</textcolor>
+                                        <align>right</align>
+                                        <scroll>false</scroll>
+                                    </control>
+                                    <control type="image">
+                                        <posx>-145</posx>
+                                        <posy>3</posy>
+                                        <width>90</width>
+                                        <height>90</height>
+                                        <texture>dialogs/video-info/rating.png</texture>
+                                    </control>
+                                </control>
         </control>
     </controls>
 </window>

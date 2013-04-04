@@ -145,9 +145,9 @@
     			<scroll>false</scroll>
     		</control>
     		<control type="progress">
-    		    <posx>380</posx>
-    		    <posy>211</posy>
-    		    <width>1144</width>
+    		    <posx>280</posx>
+    		    <posy>1080</posy>
+    		    <width>1333</width>
     		    <height>25</height>
     		    <info>PVR.ActStreamProgrSignal</info>
     		    <reveal>true</reveal>
