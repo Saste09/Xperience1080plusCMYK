@@ -93,7 +93,7 @@
 			
 			
 			<control type="image">
-								<visible>[Player.ShowInfo | Player.Paused] | Window.IsActive(musicosd)</visible>
+								<visible>Player.ShowInfo + !Window.IsActive(musicosd)</visible>
                                 <posx>18</posx>
                                 <posy>-12</posy>
                                 <width>140</width>
@@ -104,6 +104,7 @@
 			
 			
 			<control type="label">
+								<visible>Player.ShowInfo + !Window.IsActive(musicosd)</visible>
                                 <posx>176</posx>
                                     <posy>15</posy>
                                 <width>1200</width>
