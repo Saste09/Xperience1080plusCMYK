@@ -70,8 +70,11 @@
             
 			
 			
+									
+				
+			
 								<control type="label">
-                                    <posx>1620</posx>
+                                    <posx>1520</posx>
                                     <posy>755</posy>
                                     <width>400</width>
                                     <height>44</height>
@@ -84,6 +87,35 @@
 									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
                 <include>visiblehidefadeinfo</include>
                                 </control>
+								
+								
+								<control type="group">
+                                    <visible>!IsEmpty(VideoPlayer.Rating)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                <include>visiblehidefadeinfo</include>
+                                    <posx>1706</posx>
+									<posy>865</posy>
+                                    <control type="label">
+                                        <posx>-83</posx>
+                                        <posy>-128</posy>
+                                        <width>80</width>
+                                        <height>80</height>
+                                        <label>$INFO[VideoPlayer.Rating]</label>
+                                        <font>Font-Condensed-S36</font>
+                                        <textcolor>aawhite</textcolor>
+                                        <align>right</align>
+                                        <scroll>false</scroll>
+                                    </control>
+                                    <control type="image">
+                                        <posx>-177</posx>
+                                        <posy>-116</posy>
+                                        <width>57</width>
+                                        <height>57</height>
+                                        <texture>dialogs/video-info/rating.png</texture>
+                                    </control>
+                                </control>
+								
+								
 			
 			<control type="textbox">
                 <posx>290</posx>
@@ -151,31 +183,7 @@
 								
 								
 								
-								<control type="group">
-                                    <visible>!IsEmpty(VideoPlayer.Rating)</visible>
-									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
-                <include>visiblehidefadeinfo</include>
-                                    <posx>1836</posx>
-									<posy>865</posy>
-                                    <control type="label">
-                                        <posx>0</posx>
-                                        <posy>11</posy>
-                                        <width>80</width>
-                                        <height>80</height>
-                                        <label>$INFO[VideoPlayer.Rating]</label>
-                                        <font>Font-Condensed-S50-B</font>
-                                        <textcolor>aawhite</textcolor>
-                                        <align>right</align>
-                                        <scroll>false</scroll>
-                                    </control>
-                                    <control type="image">
-                                        <posx>-145</posx>
-                                        <posy>3</posy>
-                                        <width>90</width>
-                                        <height>90</height>
-                                        <texture>dialogs/video-info/rating.png</texture>
-                                    </control>
-                                </control>
+								
         </control>
     </controls>
 </window>
