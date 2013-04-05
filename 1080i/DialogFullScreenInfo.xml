@@ -102,7 +102,7 @@
 			
 			
 			
-			<control type="label">
+			<!--<control type="label">
                                     <posx>121</posx>
                                     <posy>15</posy>
                                     <width>1402</width>
@@ -112,10 +112,10 @@
                                     <font>Font-Condensed-S36</font>
                                     <align>left</align>
                                     <aligny>center</aligny>
-                                </control>
+                                </control>-->
 			
 			
-			<control type="label">
+			<!--<control type="label">
                                     <posx>121</posx>
                                     <posy>15</posy>
                                     <width>1400</width>
@@ -126,9 +126,9 @@
                                     <align>left</align>
                                     <aligny>center</aligny>
                                     <scroll>false</scroll>
-                            </control>
+                            </control>-->
 			
-								<control type="group">
+								<!--<control type="group">
                                     <posx>-10</posx>
                                     <posy>-12</posy>
                                     <control type="image">
@@ -145,7 +145,7 @@
                                         <texture>flags/defs/sd-osd.png</texture>
                                         <visible>!IsEmpty(VideoPlayer.VideoResolution) + !IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
                                     </control>
-                                </control>
+                                </control>-->
 								
 							
 								

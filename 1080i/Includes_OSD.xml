@@ -57,8 +57,8 @@
     <include name="OSDWeatherClock">
         <control type="group">
 		
-            <animation effect="slide" end="-100" time="300" tween="sine" easing="inout" condition="Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
-            <animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>
+            <!--<animation effect="slide" end="-100" time="300" tween="sine" easing="inout" condition="Player.Muted | substring(Player.Volume,-60.0)">Conditional</animation>
+            <animation effect="slide" end="-213" time="300" tween="sine" easing="inout" condition="Window.IsActive(volumebar)">Conditional</animation>-->
             <include condition="Window.IsActive(fullscreenvideo)">BannerListInfoAnimation</include>
             <include condition="!Window.IsActive(fullscreenvideo)">BannerListInfoAnimationMusicOSD</include>
             <visible>[Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Window.IsActive(fullscreenvideo)] + !Player.ShowCodec</visible>
@@ -74,6 +74,39 @@
                 <texture>osd/fullscreen/osd-back-weatherclock.png</texture>
                 <aspectratio>stretch</aspectratio>
             </control>
+			
+			<control type="label">
+                                    <posx>121</posx>
+                                    <posy>15</posy>
+                                    <width>1402</width>
+                                    <height>44</height>
+                                    <label>$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Season, • $LOCALIZE[20373] ,]$INFO[VideoPlayer.Episode, • ,. ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, • ,] $INFO[VideoPlayer.Genre, • ,]</label>
+                                    <textcolor>aawhite</textcolor>
+                                    <font>Font-Condensed-S36</font>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                </control>
+								
+							
+							
+			<control type="group">
+                                    <posx>-10</posx>
+                                    <posy>-12</posy>
+                                    <control type="image">
+                                        <width>140</width>
+                                        <height>100</height>
+                                        <colordiffuse>bbwhite</colordiffuse>
+                                        <texture>flags/defs/hd-osd.png</texture>
+                                        <visible>!IsEmpty(VideoPlayer.VideoResolution) + IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+                                    </control>
+                                    <control type="image">
+                                        <width>140</width>
+                                        <height>100</height>
+                                        <colordiffuse>bbwhite</colordiffuse>
+                                        <texture>flags/defs/sd-osd.png</texture>
+                                        <visible>!IsEmpty(VideoPlayer.VideoResolution) + !IntegerGreaterThan(VideoPlayer.VideoResolution,719)</visible>
+                                    </control>
+                                </control>
 			
 			
 			 
@@ -93,7 +126,7 @@
 			
 			
 			<control type="image">
-								<visible>Player.ShowInfo + !Window.IsActive(musicosd)</visible>
+								<visible>Player.ShowInfo + !Window.IsActive(musicosd) | Window.IsActive(visualisation)</visible>
                                 <posx>18</posx>
                                 <posy>-12</posy>
                                 <width>140</width>
@@ -104,12 +137,12 @@
 			
 			
 			<control type="label">
-								<visible>Player.ShowInfo + !Window.IsActive(musicosd)</visible>
+								
                                 <posx>176</posx>
                                     <posy>15</posy>
                                 <width>1200</width>
                                 <height>44</height>
-                                <label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, • ,]</label>
+                                <label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Artist, • ,]$INFO[MusicPlayer.Year, • ,]</label>
                                 <textcolor>aawhite</textcolor>
                                 <font>Font-Condensed-S36</font>
                                 <align>left</align>
@@ -197,7 +230,7 @@
                 <scroll>false</scroll>
             </control>
             <control type="group">
-                <visible>!Player.Forwarding + !Player.Rewinding</visible>
+                <visible>!Player.Forwarding + !Player.Rewinding + !Window.IsActive(volumebar)</visible>
                 <include>visiblehidefadeinfo</include>
                 <control type="image">
                     <description>Finish time image</description>

@@ -20,22 +20,7 @@
                         <animation effect="fade" start="100" end="0" time="0" >Hidden</animation>
                     </control>
 	
-	<control type="label">
-						
-                        <description>Pause / finish time</description>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>1920</width>
-                        <height>1080</height>
-                        <label>[UPPERCASE]$LOCALIZE[112][/UPPERCASE]</label>
-                        <scroll>false</scroll>
-                        <textcolor>77white</textcolor>
-                        <font>Font-Condensed-S80-B</font>
-                        <align>center</align>
-                        <visible>Player.Paused + ![Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding]</visible>
-                        <animation effect="fade" start="0" end="100" time="400" tween="sine" easing="inout">Visible</animation>
-                        <animation effect="fade" start="100" end="0" time="400" tween="sine" easing="inout">Hidden</animation>
-                    </control>
+	
 					
 					
         <include>OSDWeatherClock</include>
@@ -127,9 +112,10 @@
                         </control>
                     </control>
                     <control type="label">
+						<visible>[Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar) + !Window.IsActive(videoosd)] </visible>
 						<animation effect="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
 						<animation effect="slide" start="0,0" end="0,-62" time="300" tween="cubic" easing="inout" condition="!Window.IsActive(fullscreeninfo) + !Window.IsActive(videoosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
-                        <posx>1658</posx>
+                        <posx>1649</posx>
                         <posy>1090</posy>
                         <width>360</width>
                         <height>25</height>
@@ -137,6 +123,34 @@
                         <textcolor>aawhite</textcolor>
                         <font>Font-Condensed-S34</font>
                         <align>left</align>
+                    </control>
+					
+					<control type="label">
+						<visible>Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+						<animation effect="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+						<animation effect="slide" start="0,0" end="0,-62" time="300" tween="cubic" easing="inout" condition="!Window.IsActive(fullscreeninfo) + !Window.IsActive(videoosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+                        <posx>1649</posx>
+                        <posy>1090</posy>
+                        <width>360</width>
+                        <height>25</height>
+                        <label>$INFO[Player.Duration(hh:mm:ss)]</label>
+                        <textcolor>aawhite</textcolor>
+                        <font>Font-Condensed-S34</font>
+                        <align>left</align>
+                    </control>
+					
+					<control type="label">
+						<visible>Window.IsActive(videoosd) | [!Window.IsActive(fullscreeninfo) + Window.IsActive(seekbar)]</visible>
+						<animation effect="slide" start="0,0" end="0,-70" time="300" tween="cubic" easing="inout" condition="Window.IsActive(videoosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+						<animation effect="slide" start="0,0" end="0,-62" time="300" tween="cubic" easing="inout" condition="!Window.IsActive(fullscreeninfo) + !Window.IsActive(videoosd) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]">Conditional</animation>
+                        <posx>261</posx>
+                        <posy>1090</posy>
+                        <width>360</width>
+                        <height>25</height>
+                        <label>$INFO[Player.Time(hh:mm:ss)]</label>
+                        <textcolor>aawhite</textcolor>
+                        <font>Font-Condensed-S34</font>
+                        <align>right</align>
                     </control>
                     
                     
