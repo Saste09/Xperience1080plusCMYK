@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <strings>   
     <!-- Custom_Settings.xml -->
     <!-- From 41100 to 41299 -->
@@ -140,7 +140,7 @@
     <!-- From 41370 to 41399 -->
     <string id="41370">Uhrzeit:</string>
     <string id="41371">Endzeit:</string>    
-    <string id="41372">Pausiert</string>
+    <string id="41372">Pause</string>
     <string id="41380">Regisseur</string>
     <string id="41381">Auto</string>
     <string id="41382">Laufzeit</string>

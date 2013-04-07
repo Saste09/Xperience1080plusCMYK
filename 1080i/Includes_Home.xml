@@ -4331,7 +4331,7 @@
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/addedtile.png</texture>
+                                    <texture border="7">windows/home/addedtile.png</texture><!-- overlay yellow underlay blue-->
                                     <visible>[!IsEmpty(ListItem.Property(recent) | !IsEmpty(ListItem.Property(noaddon)] | [!Skin.HasSetting(HomeMusicTiles) + Skin.HasSetting(HomeBackgroundOpacity)]</visible>
                                 </control>
                                 <control type="image">
@@ -4339,7 +4339,7 @@
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile2.png</texture>
+                                    <texture border="7">windows/home/tile2.png</texture> <!-- nothing -->
                                     <visible>IsEmpty(ListItem.Property(recent) + !Skin.HasSetting(HomeMusicTiles) + !Skin.HasSetting(HomeBackgroundOpacity)</visible>
                                 </control>
                                 <control type="image">
@@ -4347,7 +4347,7 @@
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile-red.png</texture>
+                                    <texture border="7">windows/home/tile-red.png</texture> <!-- yellow overlay 1 un/focused-->
                                     <visible>IsEmpty(ListItem.Property(recent) + Skin.HasSetting(HomeMusicTiles)</visible>
                                 </control>
                                 <control type="label">
@@ -4438,7 +4438,7 @@
                                         <posy>19</posy>
                                         <width>293</width>
                                         <height>293</height>
-                                        <texture border="7">windows/home/tile..png</texture>
+                                        <texture border="7">windows/home/tile..png</texture> <!-- >greyfocused-->
                                         <visible>[!IsEmpty(ListItem.Property(recent) | !IsEmpty(ListItem.Property(noaddon)] | [!Skin.HasSetting(HomeMusicTiles) + Skin.HasSetting(HomeBackgroundOpacity)]</visible>
                                     </control>
                                     <control type="image">
