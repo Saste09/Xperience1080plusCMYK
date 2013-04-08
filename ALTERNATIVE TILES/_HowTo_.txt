@@ -1,13 +1,15 @@
 1. pick the color you want for any section on homescreen
 
-2. rename "colour.png" to "tile-yoursection.png"
+2. COPY your chosen "colour.png" to "copy your choice in here" folder.
+
+3. rename copied "colour.png" to "tile-yoursection.png"
    
-   e.g. i want music-section tiles to be coloured cyan on homescreen:
-   	-->  rename "cyan.png" to "tile-music.png"
+   e.g. i want tvshows-section tiles to be coloured cyan on homescreen:
+   	-->  rename "cyan.png" to "tile-tvshows.png"
 
-3. COPY your renamed tile to "//skin.xperience1080+CMYK/media/windows/home"
+4. COPY your renamed tile to "//skin.xperience1080+CMYK/media/windows/home"
 
-4. open XBMC and enjoy your new coloured Skin ;)
+5. open XBMC and enjoy your new coloured Skin ;)
 
 
 Name for each Section:
