@@ -69,13 +69,15 @@
             </control>
             
 			
+							
+			
+			
 			
 									
 				
 			
 								<control type="label">
-                                    <posx>1520</posx>
-                                    <posy>755</posy>
+                                    
                                     <width>400</width>
                                     <height>44</height>
                                     <label>$INFO[Player.Chapter,$LOCALIZE[21396] , / ]$INFO[Player.ChapterCount]</label>
@@ -115,6 +117,75 @@
                                     </control>
                                 </control>
 								
+								
+							<control type="group">
+								<posx>1643</posx>
+								<posy>809</posy>
+								<align>right</align>
+								
+								<control type="image">
+									<posy>0</posy>
+									<visible>!IsEmpty(VideoPlayer.VideoCodec)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.VideoCodec,flags/video/,.png]</texture>
+                            	</control>
+								<control type="image">
+									<posy>56</posy>
+									<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.VideoResolution,flags/res/,.png]</texture>
+                            	</control>							
+								<control type="image">
+									<posy>112</posy>
+									<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.VideoAspect,flags/aspectratio/,.png]</texture>
+                            	</control>
+								<control type="image">
+									<posy>0</posy>
+									<posx>98</posx>
+									<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.AudioCodec,flags/audio/,.png]</texture>
+                            	</control>
+								<control type="image">
+									<posy>56</posy>
+									<posx>98</posx>
+									<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>97</width>
+                                    <height>56</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[VideoPlayer.AudioChannels,flags/channels/,.png]</texture>
+                            	</control>
+								<control type="image">
+									<posy>550</posy>
+									<visible>!IsEmpty(VideoPlayer.ListItem.Mpaa)</visible>
+									<visible>!IsEmpty(VideoPlayer.Plot) + !IsEmpty(Window(seekbar).Property(ExtendPlot))</visible>
+                					<include>visiblehidefadeinfo</include>
+                                    <width>140</width>
+                                    <height>100</height>
+                                	<colordiffuse>bbwhite</colordiffuse>
+                                	<texture>$INFO[ListItem.Mpaa,flags/mpaa/,.png]</texture>
+                            	</control>
+							</control>
 								
 			
 			<control type="textbox">

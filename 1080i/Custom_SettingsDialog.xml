@@ -135,13 +135,13 @@
           <!-- custom home items colors-->
             <control type="grouplist" id="3">
                 <include>SettingsDialogGrouplistVars</include>
-                <visible>stringcompare(Window(skinsettings).property(Dialog),Home items colors)</visible>
+                <visible>stringcompare(Window(skinsettings).property(Dialog),$LOCALIZE[41166])</visible>
                 <control type="radiobutton" id="2201">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>Skin.HasSetting(HomeMoviesTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeMoviesTiles)</onclick>
-                    <label>Set custom Movies tiles cyan</label>
+                    <label>$LOCALIZE[41162]</label>
                     <enable>!Skin.HasSetting(HomeMovies)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2201)">Conditional</animation>
                 </control>
@@ -150,7 +150,8 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>Skin.HasSetting(HomeTVShowsTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeTVShowsTiles)</onclick>
-                    <label>Set custom TV shows tiles magenta</label>
+                    <!--<label>Set custom TV shows tiles magenta</label>-->
+					<label>$LOCALIZE[41163]</label>
                     <enable>!Skin.HasSetting(HomeTVShows)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2202)">Conditional</animation>
                 </control>
@@ -159,16 +160,16 @@
                     <include>SettingsDialogRadioButtonVars</include>
                     <selected>Skin.HasSetting(HomeMusicTiles)</selected>
                     <onclick>Skin.ToggleSetting(HomeMusicTiles)</onclick>
-                    <label>Set custom Music tiles yellow</label>
+                    <label>$LOCALIZE[41164]</label>
                     <enable>!Skin.HasSetting(HomeMusic)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2203)">Conditional</animation>
                 </control>
                 <control type="radiobutton" id="2204">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
-                    <selected>Skin.HasSetting(HomeWeatherTiles)</selected>
-                    <onclick>Skin.ToggleSetting(HomeWeatherTiles)</onclick>
-                    <label>Set custom Weather tiles black</label>
+                    <selected>Skin.HasSetting(HomeWeatherTile1)</selected>
+                    <onclick>Skin.ToggleSetting(HomeWeatherTile1)</onclick>
+                    <label>$LOCALIZE[41165]</label>
                     <enable>!Skin.HasSetting(HomeWeather)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2204)">Conditional</animation>
                 </control>

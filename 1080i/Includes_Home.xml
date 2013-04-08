@@ -4263,6 +4263,14 @@
                             </item>
                         </content>
                     </control>
+					<control type="image">
+                                    <posx>912</posx>
+                                    <posy>-5</posy>
+                                    <width>293</width>
+                                    <height>293</height>
+                                    <texture border="7">windows/home/tile2.png</texture>
+                                    <visible>[!IsEmpty(ListItem.Property(recent) | !IsEmpty(ListItem.Property(noaddon)] | [!Skin.HasSetting(HomeMusicTiles) + Skin.HasSetting(HomeBackgroundOpacity)]</visible>
+                                </control>
                     <control type="fadelabel" id="404">
                         <posx>-1</posx>
                         <posy>-1</posy>
@@ -4285,7 +4293,7 @@
                         <visible>Container(20).HasFocus(5)</visible>
                         <animation effect="fade" start="100" end="0" time="0" condition="true">Conditional</animation>
                     </control>
-                    <control type="image">
+					<control type="image">
                         <posx>917</posx>
                         <posy>289</posy>
                         <width>283</width>
@@ -4308,7 +4316,7 @@
                         <label>[UPPERCASE]$LOCALIZE[41554][/UPPERCASE]</label>
                         <animation effect="slide" end="0,6" time="100" tween="sine" easing="out" condition="Control.HasFocus(403) + Container(403).HasFocus(2)">Conditional</animation>
                     </control>
-                    <control type="panel" id="403">
+					<control type="panel" id="403">
                         <posx>893</posx>
                         <posy>-24</posy>
                         <width>331</width>
@@ -4323,15 +4331,16 @@
                         <onback>SetProperty(EditTile,1)</onback>
                         <onback>Select</onback>
                         <scrolltime>0</scrolltime>
+						
                         <itemlayout width="289" height="289">
                             <control type="group">
-                                <animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
+								<animation effect="fade" end="100" time="0" condition="true">Conditional</animation>
                                 <control type="image">
                                     <posx>19</posx>
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/addedtile.png</texture><!-- overlay yellow underlay blue-->
+                                    <texture border="7">windows/home/addedtile.png</texture>
                                     <visible>[!IsEmpty(ListItem.Property(recent) | !IsEmpty(ListItem.Property(noaddon)] | [!Skin.HasSetting(HomeMusicTiles) + Skin.HasSetting(HomeBackgroundOpacity)]</visible>
                                 </control>
                                 <control type="image">
@@ -4339,7 +4348,7 @@
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile2.png</texture> <!-- nothing -->
+                                    <texture border="7">windows/home/tile2.png</texture>
                                     <visible>IsEmpty(ListItem.Property(recent) + !Skin.HasSetting(HomeMusicTiles) + !Skin.HasSetting(HomeBackgroundOpacity)</visible>
                                 </control>
                                 <control type="image">
@@ -4347,7 +4356,7 @@
                                     <posy>19</posy>
                                     <width>293</width>
                                     <height>293</height>
-                                    <texture border="7">windows/home/tile-red.png</texture> <!-- yellow overlay 1 un/focused-->
+                                    <texture border="7">windows/home/tile-red.png</texture>
                                     <visible>IsEmpty(ListItem.Property(recent) + Skin.HasSetting(HomeMusicTiles)</visible>
                                 </control>
                                 <control type="label">
@@ -4407,10 +4416,13 @@
                                         <textoffsetx>20</textoffsetx>
                                     </control>
                                 </control>
+								
                             </control>
+							
                         </itemlayout>
                         <focusedlayout width="289" height="289">
                             <control type="group">
+							
                                 <control type="image">
                                     <posx>3</posx>
                                     <posy>3</posy>
@@ -4438,7 +4450,7 @@
                                         <posy>19</posy>
                                         <width>293</width>
                                         <height>293</height>
-                                        <texture border="7">windows/home/tile..png</texture> <!-- >greyfocused-->
+                                        <texture border="7">windows/home/tile-clear..png</texture> <!-- >greyfocused clear before-->
                                         <visible>[!IsEmpty(ListItem.Property(recent) | !IsEmpty(ListItem.Property(noaddon)] | [!Skin.HasSetting(HomeMusicTiles) + Skin.HasSetting(HomeBackgroundOpacity)]</visible>
                                     </control>
                                     <control type="image">
@@ -4471,6 +4483,7 @@
                                         <visible>!IsEmpty(ListItem.Property(noaddon))</visible>
                                     </control>
                                 </control>
+								
                                 <control type="group">
                                     <animation type="Focus">
                                         <effect type="fade" start="90" end="100" time="200" tween="sine" easing="in" />
@@ -4555,7 +4568,7 @@
                                 <onclick condition="!IsEmpty(Window.Property(RecentAlbum.1.Play)) + !IsEmpty(Window(Home).Property(SkinWidgets_Running))">SetProperty(ShowRecentAlbums,1)</onclick>
                                 <onclick condition="!IsEmpty(Window.Property(RecentAlbum.1.Play)) + !IsEmpty(Window(Home).Property(SkinWidgets_Running))">SetFocus(4023)</onclick>
                                 <property name="recent">1</property>
-                                <visible>System.HasAddon(service.skin.widgets)</visible>visible>
+                                <visible>System.HasAddon(service.skin.widgets)</visible>
                             </item>
                             <item id="2">
                                 <label>service.skin.widgets[CR]$LOCALIZE[416] /[CR]$LOCALIZE[1223]</label>
@@ -4563,7 +4576,7 @@
                                 <property name="recent">1</property>
                                 <property name="noaddon">1</property>
                                 <visible>!System.HasAddon(service.skin.widgets)</visible>
-                            </item>
+						    </item>
                         </content>
                     </control>
                     <control type="image">
@@ -4578,7 +4591,7 @@
                         <animation type="Hidden">
                             <effect type="fade" start="100" end="0" time="200" tween="sine" easing="out" />
                         </animation>
-                        <visible>ControlGroup(402).HasFocus</visible>
+						<visible>ControlGroup(402).HasFocus</visible>
                     </control>
                 </control>
             </control>

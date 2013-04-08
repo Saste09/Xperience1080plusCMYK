@@ -451,9 +451,9 @@
                     <texturefocus border="150,3,150,3">windows/settings/images/right-focus-arrow-fo.png</texturefocus>
                     <texturenofocus border="150,3,150,3">windows/settings/images/right-focus-arrow-nf.png</texturenofocus>
                     <include>SettingsCategoryDefaultButtonVars</include>
-                    <onclick>SetProperty(Dialog,Home items colors)</onclick>
+                    <onclick>SetProperty(Dialog,$LOCALIZE[41166])</onclick>
                     <onclick>ActivateWindow(3001)</onclick>
-                    <label>Manage custom home items colors</label>
+                    <label>$LOCALIZE[41161]</label>
                     <visible>stringcompare(Skin.String(HomeScreen),metro)</visible>
                 </control>
                 <control type="button" id="2003">
@@ -947,7 +947,7 @@
                         <aspectratio>stretch</aspectratio>
                         <visible>ControlGroup(8007).HasFocus</visible>
                     </control>
-                    <control type="button" id="80071">
+                   <!--<control type="button" id="80071">
                         <posx>1104</posx>
                         <posy>8</posy>
                         <width>43</width>
@@ -1006,7 +1006,7 @@
                         <label>OSD image for TV Shows (video osd)</label>
                         <label2>$INFO[Skin.String(OSDTVShowsImage)]</label2>
                         <visible>ControlGroup(8007).HasFocus</visible>
-                    </control>
+                    </control>-->
                 </control>
             </control>
             
