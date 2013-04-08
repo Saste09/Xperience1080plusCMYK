@@ -167,8 +167,8 @@
                 <control type="radiobutton" id="2204">
                     <width>1210</width>
                     <include>SettingsDialogRadioButtonVars</include>
-                    <selected>Skin.HasSetting(HomeWeatherTile1)</selected>
-                    <onclick>Skin.ToggleSetting(HomeWeatherTile1)</onclick>
+                    <selected>Skin.HasSetting(HomeWeatherTiles)</selected>
+                    <onclick>Skin.ToggleSetting(HomeWeatherTiles)</onclick>
                     <label>$LOCALIZE[41165]</label>
                     <enable>!Skin.HasSetting(HomeWeather)</enable>
                     <animation effect="fade" start="100" end="42" time="0" condition="!Control.IsEnabled(2204)">Conditional</animation>
