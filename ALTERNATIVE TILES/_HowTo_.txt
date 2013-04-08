@@ -14,7 +14,9 @@ Name for each Section:
 
 Home: 		tile-home.png
 TVShows:	tile-tvshows.png
-Music:		tile-music.png
+Music:		tile-music.png --> if you change music section 
+				   "colour-addedtile.png" has to be renamed to 
+				   "addedtile.png" and copied to same folder as "tile-music.png"
 Applications:	tile-apps.png
 Weather:	tile-weather.png
 
